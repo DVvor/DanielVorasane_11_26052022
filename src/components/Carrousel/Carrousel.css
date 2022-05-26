@@ -1,0 +1,14 @@
+.carrousel {
+  /* border-radius: 10px; */
+  height: 415px;
+  width: 1240px;
+  border-radius: 25px;
+
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+

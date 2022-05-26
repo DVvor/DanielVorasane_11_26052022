@@ -1,0 +1,28 @@
+.thumb {
+  width: 420px;
+  height: 420px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-color: #FF6060;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  font-family: 'montserrat';
+  font-weight: 300;
+  transition: box-shadow .3s;
+}
+
+.thumb:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.5);
+}
+
+h2 {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin: 2%;
+  position: absolute;
+  left: 5.88%;
+  right: 5.88%;
+  top: 78.82%;
+  bottom: 5.88%;
+}

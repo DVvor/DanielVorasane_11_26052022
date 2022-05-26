@@ -1,0 +1,25 @@
+.banner {
+  /* border-radius: 10px; */
+  height: 223px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  position: relative;
+}
+
+.img-banner {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+h1 {
+  text-align: center;
+  position:absolute;
+  font-size: 48px;
+  color: #FFFFFF;
+  top: 40%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}

@@ -1,0 +1,11 @@
+.kasa-footer {
+  height: 209px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-footer {
+  width: 375px;
+  height: 100%;
+}
