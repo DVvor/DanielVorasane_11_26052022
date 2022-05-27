@@ -30,12 +30,24 @@
   justify-content: center;  
   display: flex;
   align-items: center;
+  cursor: pointer;
+  text-decoration: none;
 
+}
+
+
+.button-header:visited {
+  text-decoration: none;
+  color: #FF6060;
 }
 .button-header:hover {
   text-decoration: underline;
 
 }
+.button-header:active {
+  font-weight: 700;
+}
+
 .logo-header {
   height: 100%;
 }

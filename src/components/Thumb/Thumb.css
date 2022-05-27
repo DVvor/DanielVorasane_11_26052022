@@ -7,6 +7,8 @@
   position: relative;
   font-family: 'montserrat';
   font-weight: 300;
+  cursor: pointer;
+  animation: appear 2s;
 }
 
 .cover{
@@ -29,4 +31,30 @@ h2 {
   right: 5.88%;
   top: 78.82%;
   bottom: 5.88%;
+  animation: titleappear 2s;
+
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    
+    }
+    
+  to {
+    opacity: 1;
+    }
+}
+
+@keyframes titleappear {
+  from{
+    opacity: 0;
+    transform: translateY(20%);
+    
+    }
+    
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }

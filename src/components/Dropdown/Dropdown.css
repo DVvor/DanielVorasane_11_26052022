@@ -5,6 +5,8 @@
   margin-bottom: 20px;
   width: 45%;
   position: relative;
+  animation: titleappear 1s;
+
 }
 
 .btn-dropdown {
@@ -20,6 +22,7 @@
   font-weight: 500;
   padding-right: 18px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .title-btn-dropdown {
