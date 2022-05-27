@@ -1,5 +1,5 @@
 import './Footer.css'
-import footer from '../../assets/footer.png'
+import footer from '../../../assets/footer.png'
 
 function Footer() { 
   return (

@@ -1,13 +1,19 @@
 import './Thumb.css'
 // import accomodations from '../../Datas/accomodations.json';
+import { useNavigate } from "react-router-dom"
 
-function Thumb(data) { 
+function Thumb(props) {
+  const {title , id, cover} = props
+  const navigate = useNavigate() // permet d'utiliser une fonction de redirection - naviguer entre les pages
 
-  const { title } = data
+  function accomodationPage() {
+    navigate(`/accomodation/${id}`)  // Lien url accomodation
+  }
   return (
-      <div className='thumb'>
+      <div className='thumb' onClick={accomodationPage}>
         <h2>{title}</h2>
-        {/* <img>{cover}</img> */}
+        <img className='cover' alt='img-accomodation' src={cover}/>
+
       </div>
       
     )

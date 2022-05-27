@@ -12,7 +12,7 @@
   border-radius: 25px;
 }
 
-h1 {
+.title-banner {
   text-align: center;
   position:absolute;
   font-size: 48px;

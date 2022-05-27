@@ -1,14 +1,34 @@
-.carrousel {
+.carroussel {
   /* border-radius: 10px; */
   height: 415px;
-  width: 1240px;
+  width: 100%;
   border-radius: 25px;
-
+  position: relative;
 }
 
-.cover {
+.picture {
   width: 100%;
   height: 100%;
   border-radius: 25px;
 }
 
+.next {
+  color: #FFFFFF;
+  font-size: 72px;
+  top: 45%;
+  right: 5%;
+  position: absolute;
+}
+
+.previous {
+  color: #FFFFFF;
+  font-size: 72px;
+  top: 45%;
+  left: 5%;
+  position: absolute;
+}
+
+.next:hover , .previous:hover {
+  cursor: pointer;
+  color: #FF6060;
+}

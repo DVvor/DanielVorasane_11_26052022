@@ -1,0 +1,14 @@
+.tag {
+  height: 25px;
+  /* width: 115px; */
+  border-radius: 10px;
+  background-color: #FF6060;
+  font-size: 14px;
+  justify-content: center;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

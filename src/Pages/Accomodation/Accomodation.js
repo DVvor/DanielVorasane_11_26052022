@@ -1,51 +1,61 @@
-import Header from "../../components/Header/Header"
-import Footer from '../../components/Footer/Footer'
 import Dropdown from '../../components/Dropdown/Dropdown'
 import Carrousel from "../../components/Carrousel/Carrousel";
-
+import Tag from '../../components/Tag/Tag'
 import './Accomodation.css';
 
-import ratingFull from '../../assets/ratingFull.png'
-import ratingEmpty from '../../assets/ratingEmpty.png'
+import RatingFull from '../../assets/ratingFull.png'
+import RatingEmpty from '../../assets/ratingEmpty.png'
 
-// import accomodations from '../../Datas/accomodations.json';
+import { useParams } from "react-router-dom";
+import accomodations from "../../Datas/accomodations.json"
+// import ErrorPage from "../Error404/ErrorPage"
 
-// const accomodationsarray = accomodations
 
 function Accomodation() {
-    return (
-    <>
-        <Header />
-        <Carrousel />
-        <div className="section-information">
-          <div className="location">
-            <h1 className="title">Cozy loft on the Canal Saint-Martin</h1>
-            <p>Paris, Île-de-France</p>
-            <div className="section-tags">
-              <div className="tag">Cosy</div>
-              <div className="tag">Canal</div>
-              <div className="tag">Paris 10</div>
-            </div>
-          </div>
-          <div className="bl-host">
-            <div className="host">
-                <div className="name-host">  </div>
-                <div className="picture-host"></div>
-            </div>
-            <div className="rating">
-              <img alt='rating-full' className='rating-full' src={ratingFull} />
-              <img alt='rating-full' className='rating-full' src={ratingFull} />
-              <img alt='rating-full' className='rating-full' src={ratingFull} />
-              <img alt='rating-empty' className='rating-empty' src={ratingEmpty} />
-              <img alt='rating-empty' className='rating-empty' src={ratingEmpty} />
-            </div>
-          </div>
-          
+  const { id } = useParams(); // current page ID
+  const currentAccomodation = accomodations.filter(accomodation => accomodation.id === id)[0]
+
+  // const ratingEmpty = [5 - currentAccomodation.rating]
+
+  const ratingFull = [];
+    for (let i = 0; i<currentAccomodation.rating; i++){
+      ratingFull.push(<img alt='rating' className='rating-full' src={RatingFull} />)
+    }
+  const ratingEmpty = [];
+  for (let i = 0; i< 5-currentAccomodation.rating; i++){
+    ratingFull.push(<img alt='rating' className='rating-empty' src={RatingEmpty} />)
+  }
+
+  // console.log(currentAccomodation.rating)
+  return (
+  <>
+      <Carrousel content={currentAccomodation.pictures}/>
+      <div className="section-information">
+        <div className="location">
+          <h1 className="title">{currentAccomodation.title}</h1>
+          <p className='city'>{currentAccomodation.location}</p>
+          <section className="section-tags">
+            <Tag content={currentAccomodation.tags}/>
+          </section>
         </div>
-        <Dropdown />
-        <Footer />
-    </>
-    )
+        <div className="bl-host">
+          <div className="host">
+              <div className="name-host">{currentAccomodation.host.name}</div>
+              <img className="picture-host" alt='host' src={currentAccomodation.host.picture}/>
+          </div>
+          <div className="rating">
+            {ratingFull}
+            {ratingEmpty}
+          </div>
+        </div>
+        
+      </div>
+      <section className='section-dropdown'>
+        <Dropdown content={currentAccomodation.description} title="Description"/>
+        <Dropdown content={currentAccomodation.equipments} title="Équipements"/>
+      </section>
+  </>
+  )
 
 }
 
