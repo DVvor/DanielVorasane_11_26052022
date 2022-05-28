@@ -1,30 +1,57 @@
+import { useState } from 'react'
 import './Collapse.css'
 
 // import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
 
 
 function Collapse({content, title, type }) {
+  const [isOpen, setIsOpen] = useState(false)
+  // const open = false
+  // console.log(isOpen)
+
   function openCollapse() {
-    console.log('✨ Ceci est un clic ✨')
+    setIsOpen(!isOpen)
+    // open = !open
+
+    
+
+    // isOpen ? setIsOpen(false) : setIsOpen(true)
+
+    // if (isOpen === true) {
+    //   setIsOpen(false)
+    // } else if (isOpen === false) {
+    //   setIsOpen(true)
+    // }
+
   }
   return (
   <>
-    <div className={`bl-collapse ${type}`}>
-        <div className='bl-title-collapse' onClick={openCollapse}>
-          <p className='title-btn-collapse'>{title}</p>
-          <FontAwesomeIcon icon={faAngleDown} />
-        </div>
+      <div className={`bl-collapse ${type}`}>
+          <div className='bl-title-collapse' onClick={openCollapse}>
+            <p className='title-btn-collapse'>{title}</p>
+            {isOpen && 
+              <FontAwesomeIcon icon={faAngleUp} />
+            }
+            {!isOpen &&
+              <FontAwesomeIcon icon={faAngleDown} />
+            }
+          </div>
 
-        <div className='txt-collapse'>
-          {typeof content != "string" ?
-              <ul className='equipments'>
-                  {content.map((equipment, index) => <li  className='equipment' key={`${equipment}-${index}`}>{equipment}</li>)}
-              </ul> : <p>{content}</p>
-          }
-        </div>
-    </div>
+        {isOpen &&
+          <div className='txt-collapse'>
+            {typeof content != "string" ?
+                <ul className='equipments'>
+                    {content.map((equipment, index) => <li  className='equipment' key={`${equipment}-${index}`}>{equipment}</li>)}
+                </ul> : <p>{content}</p>
+            }
+          </div>
+        }
+
+      </div>
+
   </>
 		
 		
