@@ -19,11 +19,11 @@ function Accomodation() {
 
   const ratingFull = [];
     for (let i = 0; i<currentAccomodation.rating; i++){
-      ratingFull.push(<img alt='rating' className='rating-full' src={RatingFull} />)
+      ratingFull.push(<img alt='rating' className='rating-full' src={RatingFull} key={`ratingFull${i}`} />)
     }
   const ratingEmpty = [];
   for (let i = 0; i< 5-currentAccomodation.rating; i++){
-    ratingFull.push(<img alt='rating' className='rating-empty' src={RatingEmpty} />)
+    ratingFull.push(<img alt='rating' className='rating-empty' src={RatingEmpty} key={`ratingEmpty${i}`} />)
   }
 
   // console.log(currentAccomodation.rating)
