@@ -77,7 +77,9 @@
   width: 30px;
 }
 
-.section-dropdown {
+.section-collapse {
   display: flex;
   justify-content: space-between;
+  height: 300px;
+  gap: 10%;
 }

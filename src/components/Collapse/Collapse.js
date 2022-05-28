@@ -1,23 +1,23 @@
-import './Dropdown.css'
+import './Collapse.css'
 
 // import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 
-function Dropdown({content, title }) {
-  function openDropdown() {
+function Collapse({content, title, type }) {
+  function openCollapse() {
     console.log('✨ Ceci est un clic ✨')
   }
   return (
   <>
-    <div className='bl-dropdown'>
-        <div className='btn-dropdown' onClick={openDropdown}>
-          <span className='title-btn-dropdown'>{title}</span>
+    <div className={`bl-collapse ${type}`}>
+        <div className='bl-title-collapse' onClick={openCollapse}>
+          <p className='title-btn-collapse'>{title}</p>
           <FontAwesomeIcon icon={faAngleDown} />
         </div>
 
-        <div className='txt-dropdown'>
+        <div className='txt-collapse'>
           {typeof content != "string" ?
               <ul className='equipments'>
                   {content.map((equipment, index) => <li  className='equipment' key={`${equipment}-${index}`}>{equipment}</li>)}
@@ -31,4 +31,4 @@ function Dropdown({content, title }) {
 	)
 }
 
-export default Dropdown
+export default Collapse

@@ -1,8 +1,9 @@
 import './Home.css'
+import CoverHome from '../../assets/cover-home.png'
 
 
 import Banner from "../../components/Banner/Banner"
-import Thumb from "../../components/Thumb/Thumb";
+import Thumb from "../../components/Thumb/Thumb"
 
 import accomodations from '../../Datas/accomodations.json';
 
@@ -12,7 +13,7 @@ function Home() {
   
   return (
   <>
-      <Banner />
+      <Banner cover={CoverHome} title="Chez vous, partout ailleurs"/>
 
       <div className='gallery'>
     {accomodations.map( accomodation => (

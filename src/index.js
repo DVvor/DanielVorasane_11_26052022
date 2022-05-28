@@ -4,7 +4,7 @@ import './index.css';
 import Home from './Pages/Home/Home'
 import Accomodation from './Pages/Accomodation/Accomodation'
 import AboutPage from './Pages/AboutPage/AboutPage'
-import ErrorPage from './Pages/Error404/ErrorPage'
+import ErrorPage from './Pages/ErrorPage/ErrorPage'
 import Layout from './components/Layout/Layout';
 
 

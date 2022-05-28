@@ -1,15 +1,39 @@
-.bl-dropdown{
+.bl-collapse{
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 20px;
-  width: 45%;
   position: relative;
   animation: titleappear 1s;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+
+
+}
+.normal {
+  width: 45%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.large {
+  width: 1023px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
 
 }
 
-.btn-dropdown {
+.bl-title-collapse {
   background: #FF6060;
   height: 52px;
   width: 100%;
@@ -25,37 +49,26 @@
   cursor: pointer;
 }
 
-.title-btn-dropdown {
-  font-family:'Montserrat';
+.title-btn-collapse {
   margin: 5px;
   margin-left: 18px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
+  
 }
 
-.txt-dropdown {
+.txt-collapse {
   background-color: #F6F6F6;
   border-radius: 0px 0px 5px 5px;
   width: 100%;
-  font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 400;
   color: #FF6060;
   box-sizing: border-box;
-  padding: 30px 12px 53px 12px;
-  height: 249px;
-  font-style: normal;
-  line-height: 26px;
-  position: relative;
-  top: -5px;
-  z-index: -1;
+  padding: 5px 12px 5px 12px;
+  flex: 1;
 }
 
-.txt-dropdown > .equipments {
+.txt-collapse > .equipments {
   list-style: none;
-  margin: 0;
+  margin: 1em 0em;
   padding: 0;
+
 }
 

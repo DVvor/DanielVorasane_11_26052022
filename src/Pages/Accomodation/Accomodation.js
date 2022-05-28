@@ -1,4 +1,4 @@
-import Dropdown from '../../components/Dropdown/Dropdown'
+import Collapse from '../../components/Collapse/Collapse'
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Tag from '../../components/Tag/Tag'
 import './Accomodation.css';
@@ -50,9 +50,9 @@ function Accomodation() {
         </div>
         
       </div>
-      <section className='section-dropdown'>
-        <Dropdown content={currentAccomodation.description} title="Description"/>
-        <Dropdown content={currentAccomodation.equipments} title="Équipements"/>
+      <section className='section-collapse'>
+        <Collapse content={currentAccomodation.description} title="Description" type="normal"/>
+        <Collapse content={currentAccomodation.equipments} title="Équipements" type="normal"/>
       </section>
   </>
   )
