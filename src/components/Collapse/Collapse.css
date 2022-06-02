@@ -75,10 +75,22 @@
   .bl-collapse {
     width: 100%;
   }
+  .normal {
+    font-size: 20px;
+  }
+  .large {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .bl-collapse {
     width: 100%;
+  }
+  .normal {
+    font-size: 20px;
+  }
+  .large {
+    font-size: 20px;
   }
 }
