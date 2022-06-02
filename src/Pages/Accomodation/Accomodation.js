@@ -2,29 +2,35 @@ import Collapse from '../../components/Collapse/Collapse'
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Tag from '../../components/Tag/Tag'
 import './Accomodation.css';
+import ErrorPage from '../ErrorPage/ErrorPage'
+
 
 import RatingFull from '../../assets/ratingFull.png'
 import RatingEmpty from '../../assets/ratingEmpty.png'
 
 import { useParams } from "react-router-dom";
 import accomodations from "../../Datas/accomodations.json"
-// import ErrorPage from "../Error404/ErrorPage"
-import { useNavigate } from "react-router-dom"
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
+// import { useNavigate } from "react-router-dom"
+// import { useEffect } from 'react';
 function Accomodation() {
   const { id } = useParams(); // current page ID
-  const navigate = useNavigate() // permet d'utiliser une fonction de redirection - naviguer entre les pages
+  // const navigate = useNavigate() // permet d'utiliser une fonction de redirection - naviguer entre les pages
 
   const currentAccomodation = accomodations.filter(accomodation => accomodation.id === id)[0]
-  console.log(currentAccomodation.id)
-  useEffect(() => {
-    if(currentAccomodation.id === undefined) {
-      navigate('/accomodation/46d188c5')
-    }
-})
+  const arrayId = accomodations.map(accomodation => accomodation.id)
+  // const errorPage = (arrayId.includes(id))
+  // console.log(id,errorPage,arrayId)
   
-  
-  // const ratingEmpty = [5 - currentAccomodation.rating]
+    // useEffect(() => { 
+    //       if (errorPage === false) {alert('error page')}
+    // },[errorPage])
+
+  if(!arrayId.includes(id)) {
+    return (
+      <ErrorPage />
+    )
+  }
 
   const ratingFull = [];
     for (let i = 0; i<currentAccomodation.rating; i++){
