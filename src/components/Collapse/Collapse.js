@@ -14,18 +14,7 @@ function Collapse({content, title, type }) {
 
   function openCollapse() {
     setIsOpen(!isOpen)
-    // open = !open
-
-    
-
-    // isOpen ? setIsOpen(false) : setIsOpen(true)
-
-    // if (isOpen === true) {
-    //   setIsOpen(false)
-    // } else if (isOpen === false) {
-    //   setIsOpen(true)
-    // }
-
+  
   }
   return (
   <>

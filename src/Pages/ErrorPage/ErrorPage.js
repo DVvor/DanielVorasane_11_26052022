@@ -1,4 +1,5 @@
 import './ErrorPage.css';
+import { Link } from 'react-router-dom'
 
 
 function ErrorPage() {
@@ -10,7 +11,7 @@ function ErrorPage() {
         </div>
 
         <div className="btn-return">
-            <span>Retourner sur la page d’accueil</span>
+            <Link to="/About" className='link-return-home'>Retourner sur la page d’accueil</Link>
         </div>
     </>
     )

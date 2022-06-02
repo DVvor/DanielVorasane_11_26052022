@@ -5,8 +5,10 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 function Carrousel({content}) {
-	const [index, setIndex] = useState(0)
-
+	const [index, setIndex] = useState(0) 
+	// (0) compteur initial
+	// setIndex permet de modifier l'index
+	
 	const currentPicture = content[index]
 	// console.log(content, currentPicture)
 
