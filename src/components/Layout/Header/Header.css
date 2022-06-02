@@ -49,3 +49,16 @@
 .logo-header {
   height: 100%;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .kasa-header {
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    gap: 10px;
+  }
+  .nav-header {
+    width: 100%;
+    justify-content: center;
+
+  }
+}

@@ -38,3 +38,9 @@
     transform: scale(1);
   }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .title-banner {
+    font-size: 38px;
+  }
+}

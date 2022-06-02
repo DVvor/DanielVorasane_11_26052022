@@ -71,3 +71,14 @@
 
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bl-collapse {
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .bl-collapse {
+    width: 100%;
+  }
+}
