@@ -45,7 +45,9 @@ function Carrousel({content}) {
 						<FontAwesomeIcon icon={faChevronRight} className="next" onClick={nextPicture}/>
 					</div>
 				}
-
+				{content.length > 1 && 
+					<p className='counter'>{`${index} / ${content.length}`}</p>
+				}
 			</div>
 
 		</>

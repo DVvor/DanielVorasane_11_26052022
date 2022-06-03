@@ -35,6 +35,19 @@
   color: #FF6060;
 }
 
+.counter {
+  position: relative;
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+  bottom: 50px;
+  color: #FFFFFF;
+
+}
 @media (min-width: 320px) and (max-width: 767px) {
   .carroussel {
     height: 255px;
