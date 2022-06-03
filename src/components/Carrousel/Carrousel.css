@@ -34,3 +34,26 @@
   cursor: pointer;
   color: #FF6060;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .carroussel {
+    height: 255px;
+  }
+  .picture {
+    height: 255px;
+  }
+  .previous {
+    height: 20px;
+    width: 12px;
+    left: 20px;
+    top: 130px;
+    border-radius: 0px;
+  }
+  .next {
+    height: 20px;
+    width: 12px;
+    right: 20px;
+    top: 130px;
+    border-radius: 0px;
+  }
+}

@@ -40,7 +40,7 @@ function Carrousel({content}) {
 				<img alt='cover' className='picture' src={currentPicture} />
 				
 				{content.length > 1 &&
-					<div>
+					<div className='chevron'>
 						<FontAwesomeIcon icon={faChevronLeft} className="previous" onClick={previousPicture}/>
 						<FontAwesomeIcon icon={faChevronRight} className="next" onClick={nextPicture}/>
 					</div>

@@ -12,3 +12,11 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .tag {
+    height: 20px;
+    font-size: 12px;
+  }
+
+}

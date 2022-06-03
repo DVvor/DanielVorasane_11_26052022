@@ -41,6 +41,20 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
   .title-banner {
-    font-size: 38px;
+    width: 50%;
+    text-align: start;
+    top: 35%;
+    left: 16px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    animation: none;
   }
-}
+  .banner {
+    height: 111px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+} 

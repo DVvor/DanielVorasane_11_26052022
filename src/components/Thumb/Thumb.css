@@ -62,7 +62,23 @@ h2 {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .h2 {
-    font-size: 20px;
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    left: 5.88%;
+    right: 5.88%;
+    top: 72%;
+    bottom: 5.88%;
+
   }
+  .thumb {
+    height: 255px;
+  }
+  .cover {
+    border-radius: 20px;
+  }
+
 }

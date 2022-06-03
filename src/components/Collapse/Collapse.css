@@ -88,9 +88,15 @@
     width: 100%;
   }
   .normal {
-    font-size: 20px;
+    font-size: 13px;
   }
   .large {
-    font-size: 20px;
+    font-size: 13px;
+  }
+  .bl-title-collapse {
+    height: max-content;
+  }
+  .txt-collapse {
+    line-height :17px;
   }
 }
