@@ -1,5 +1,4 @@
 import './Thumb.css'
-// import accomodations from '../../Datas/accomodations.json';
 import { useNavigate } from "react-router-dom"
 
 function Thumb(props) {
@@ -7,6 +6,7 @@ function Thumb(props) {
   const navigate = useNavigate() // permet d'utiliser une fonction de redirection - naviguer entre les pages
 
   function accomodationPage() {
+
     navigate(`/accomodation/${id}`)  // Lien url accomodation
   }
   return (

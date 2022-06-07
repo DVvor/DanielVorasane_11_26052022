@@ -10,22 +10,15 @@ import RatingEmpty from '../../assets/ratingEmpty.png'
 
 import { useParams } from "react-router-dom";
 import accomodations from "../../Datas/accomodations.json"
-// import { useEffect } from 'react';
-// import { useNavigate } from "react-router-dom"
-// import { useEffect } from 'react';
+
 function Accomodation() {
+  window.scrollTo(0, 0)
   const { id } = useParams(); // current page ID
-  // const navigate = useNavigate() // permet d'utiliser une fonction de redirection - naviguer entre les pages
 
   const currentAccomodation = accomodations.filter(accomodation => accomodation.id === id)[0]
   const arrayId = accomodations.map(accomodation => accomodation.id)
-  // const errorPage = (arrayId.includes(id))
-  // console.log(id,errorPage,arrayId)
-  
-    // useEffect(() => { 
-    //       if (errorPage === false) {alert('error page')}
-    // },[errorPage])
 
+  
   if(!arrayId.includes(id)) {
     return (
       <ErrorPage />

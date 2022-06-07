@@ -79,8 +79,6 @@
 
 .section-collapse {
   display: flex;
-  /* justify-content: space-between;
-  height: 300px; */
   gap: 10%;
 }
 

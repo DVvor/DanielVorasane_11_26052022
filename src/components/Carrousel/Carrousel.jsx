@@ -29,10 +29,6 @@ function Carrousel({content}) {
 			setIndex(index - 1)
 		}
 	}
-	// 	currentMediaIndex -= 1
-  // if (currentMediaIndex < 0) {
-  //   currentMediaIndex = mediasPhotographer.length - 1
-  // }
 
   return (
 		<>
@@ -46,12 +42,11 @@ function Carrousel({content}) {
 					</div>
 				}
 				{content.length > 1 && 
-					<p className='counter'>{`${index} / ${content.length}`}</p>
+					<p className='counter'>{`${index+1} / ${content.length}`}</p>
 				}
 			</div>
 
 		</>
-		
 
 	)
 }
